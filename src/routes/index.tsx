@@ -5,7 +5,7 @@ import {
   MessageCircle, Phone, Video, Instagram, Menu, X, ChevronDown,
   CheckCircle2, ShieldCheck, Sparkles,
 } from "lucide-react";
-import heroImg from "@/assets/hero-lawyer.jpg";
+import heroImg from "@/assets/maria-monteiro.jpg";
 import aboutImg from "@/assets/about-office.jpg";
 
 const WHATSAPP = "https://wa.me/message/UE562PFEOQKLL1";
