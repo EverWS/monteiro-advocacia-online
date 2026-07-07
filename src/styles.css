@@ -39,47 +39,48 @@
 
 :root {
   --radius: 0.5rem;
-  /* Cream / blush background derived from #640010 lightened */
-  --background: oklch(0.985 0.006 30);
-  --foreground: oklch(0.25 0.05 25);
 
-  --card: oklch(0.995 0.004 30);
-  --card-foreground: oklch(0.25 0.05 25);
-  --popover: oklch(0.995 0.004 30);
-  --popover-foreground: oklch(0.25 0.05 25);
+  /* Off-white / warm ivory background */
+  --background: oklch(0.985 0.004 90);
+  --foreground: oklch(0.28 0.04 250);
 
-  /* Primary: deep burgundy #640010 */
-  --primary: oklch(0.32 0.135 25);
-  --primary-foreground: oklch(0.985 0.006 30);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.28 0.04 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.28 0.04 250);
 
-  /* Secondary: soft blush */
-  --secondary: oklch(0.93 0.025 25);
-  --secondary-foreground: oklch(0.32 0.08 25);
+  /* Primary: deep navy blue from brand (#2E4257 approx) */
+  --primary: oklch(0.32 0.045 250);
+  --primary-foreground: oklch(0.985 0.004 90);
 
-  --muted: oklch(0.95 0.014 25);
-  --muted-foreground: oklch(0.48 0.04 25);
+  /* Secondary: silver-tinted stone */
+  --secondary: oklch(0.94 0.008 250);
+  --secondary-foreground: oklch(0.32 0.045 250);
 
-  /* Accent: rose nude */
-  --accent: oklch(0.86 0.05 25);
-  --accent-foreground: oklch(0.32 0.08 25);
+  --muted: oklch(0.955 0.006 250);
+  --muted-foreground: oklch(0.5 0.02 250);
 
-  /* Custom palette — burgundy → rose → blush → cream */
-  --gold: oklch(0.55 0.16 25);          /* mid burgundy/rose */
-  --rose: oklch(0.78 0.08 20);          /* dusty rose */
-  --cream: oklch(0.965 0.012 30);
+  /* Accent: warm silver */
+  --accent: oklch(0.88 0.012 250);
+  --accent-foreground: oklch(0.32 0.045 250);
 
-  --destructive: oklch(0.5 0.2 25);
-  --destructive-foreground: oklch(0.985 0.006 30);
+  /* "Gold" role is now silver/steel to match the brand mark */
+  --gold: oklch(0.68 0.02 250);
+  --rose: oklch(0.82 0.015 250);
+  --cream: oklch(0.97 0.006 90);
 
-  --border: oklch(0.89 0.022 25);
-  --input: oklch(0.92 0.018 25);
-  --ring: oklch(0.55 0.16 25);
+  --destructive: oklch(0.52 0.18 25);
+  --destructive-foreground: oklch(0.985 0.004 90);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.97 0.012 30) 0%, oklch(0.88 0.05 20) 100%);
-  --gradient-gold: linear-gradient(135deg, oklch(0.45 0.16 25) 0%, oklch(0.32 0.135 25) 100%);
-  --shadow-soft: 0 4px 24px -8px oklch(0.32 0.135 25 / 0.18);
-  --shadow-elegant: 0 20px 60px -20px oklch(0.32 0.135 25 / 0.28);
-  --shadow-gold: 0 10px 30px -10px oklch(0.45 0.16 25 / 0.45);
+  --border: oklch(0.9 0.008 250);
+  --input: oklch(0.92 0.008 250);
+  --ring: oklch(0.32 0.045 250);
+
+  --gradient-hero: linear-gradient(135deg, oklch(0.98 0.006 90) 0%, oklch(0.9 0.015 250) 100%);
+  --gradient-gold: linear-gradient(135deg, oklch(0.42 0.05 250) 0%, oklch(0.28 0.045 250) 100%);
+  --shadow-soft: 0 4px 24px -8px oklch(0.32 0.045 250 / 0.18);
+  --shadow-elegant: 0 20px 60px -20px oklch(0.28 0.045 250 / 0.28);
+  --shadow-gold: 0 10px 30px -10px oklch(0.32 0.045 250 / 0.35);
 }
 
 @layer base {
