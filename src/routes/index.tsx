@@ -8,6 +8,19 @@ import {
 import heroImg from "@/assets/maria-monteiro.jpg";
 import aboutImg from "@/assets/about-office.jpg";
 import logoMark from "@/assets/logo-mark.png";
+import watermark from "@/assets/watermark-m.png.asset.json";
+
+function Watermark({ className = "" }: { className?: string }) {
+  return (
+    <img
+      src={watermark.url}
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      className={`pointer-events-none select-none absolute opacity-[0.06] ${className}`}
+    />
+  );
+}
 
 const WHATSAPP = "https://wa.me/message/UE562PFEOQKLL1";
 const INSTAGRAM = "https://www.instagram.com/adv.mariamonteiro/";
