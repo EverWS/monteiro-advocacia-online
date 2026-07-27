@@ -7,7 +7,20 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/maria-monteiro.jpg";
 import aboutImg from "@/assets/about-office.jpg";
-import logoMark from "@/assets/logo-mark.png";
+import logoMark from "@/assets/mark-m-dark.png.asset.json";
+import watermark from "@/assets/watermark-m.png.asset.json";
+
+function Watermark({ className = "" }: { className?: string }) {
+  return (
+    <img
+      src={watermark.url}
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      className={`pointer-events-none select-none absolute -z-10 opacity-[0.07] ${className}`}
+    />
+  );
+}
 
 const WHATSAPP = "https://wa.me/message/UE562PFEOQKLL1";
 const INSTAGRAM = "https://www.instagram.com/adv.mariamonteiro/";
@@ -39,12 +52,12 @@ function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-3 group">
-          <img src={logoMark} alt="Maria Monteiro Advocacia" width={48} height={48} className="w-12 h-12 object-contain" />
-          <div className="leading-tight hidden sm:block">
-            <div className="font-display text-lg text-primary tracking-wide">Maria Monteiro</div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground">Advocacia e Consultoria Jurídica</div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 h-24 flex items-center justify-between">
+        <a href="#inicio" className="flex items-center gap-4 group">
+          <img src={logoMark.url} alt="Maria Monteiro Advocacia" width={64} height={58} className="h-11 lg:h-12 w-auto object-contain shrink-0" />
+          <div className="leading-none hidden sm:block">
+            <div className="font-display text-2xl lg:text-[1.75rem] text-primary tracking-wide">Maria Monteiro</div>
+            <div className="mt-1.5 text-[9px] lg:text-[10px] tracking-[0.3em] uppercase text-muted-foreground">Advocacia e Consultoria Jurídica</div>
           </div>
         </a>
         <nav className="hidden lg:flex items-center gap-8">
@@ -137,7 +150,8 @@ function Hero() {
 
 function About() {
   return (
-    <section id="sobre" className="py-24 lg:py-32">
+    <section id="sobre" className="relative isolate overflow-hidden py-24 lg:py-32">
+      <Watermark className="-right-24 top-1/2 -translate-y-1/2 w-[420px] lg:w-[560px]" />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
         <div className="relative order-2 lg:order-1">
           <div className="rounded-[2rem] overflow-hidden shadow-elegant">
@@ -177,7 +191,8 @@ const areas = [
 
 function Areas() {
   return (
-    <section id="areas" className="py-24 lg:py-32 bg-secondary/40">
+    <section id="areas" className="relative isolate overflow-hidden py-24 lg:py-32 bg-secondary/40">
+      <Watermark className="-left-28 top-10 w-[380px] lg:w-[520px]" />
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="text-xs uppercase tracking-[0.3em] text-gold mb-4">Especialidades</div>
@@ -371,7 +386,8 @@ function Contact() {
     window.open(`${WHATSAPP}?text=${encodeURIComponent(text)}`, "_blank");
   };
   return (
-    <section id="contato" className="py-24 lg:py-32 bg-secondary/40">
+    <section id="contato" className="relative isolate overflow-hidden py-24 lg:py-32 bg-secondary/40">
+      <Watermark className="left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] lg:w-[700px]" />
       <div className="max-w-6xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12">
         <div>
           <div className="text-xs uppercase tracking-[0.3em] text-gold mb-4">Contato</div>
