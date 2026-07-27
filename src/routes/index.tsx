@@ -150,7 +150,8 @@ function Hero() {
 
 function About() {
   return (
-    <section id="sobre" className="py-24 lg:py-32">
+    <section id="sobre" className="relative overflow-hidden py-24 lg:py-32">
+      <Watermark className="-right-24 top-1/2 -translate-y-1/2 w-[420px] lg:w-[560px]" />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
         <div className="relative order-2 lg:order-1">
           <div className="rounded-[2rem] overflow-hidden shadow-elegant">
