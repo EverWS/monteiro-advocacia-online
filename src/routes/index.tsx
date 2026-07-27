@@ -386,7 +386,8 @@ function Contact() {
     window.open(`${WHATSAPP}?text=${encodeURIComponent(text)}`, "_blank");
   };
   return (
-    <section id="contato" className="py-24 lg:py-32 bg-secondary/40">
+    <section id="contato" className="relative overflow-hidden py-24 lg:py-32 bg-secondary/40">
+      <Watermark className="left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] lg:w-[700px]" />
       <div className="max-w-6xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12">
         <div>
           <div className="text-xs uppercase tracking-[0.3em] text-gold mb-4">Contato</div>
