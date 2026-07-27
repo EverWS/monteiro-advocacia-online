@@ -17,7 +17,7 @@ function Watermark({ className = "" }: { className?: string }) {
       alt=""
       aria-hidden="true"
       loading="lazy"
-      className={`pointer-events-none select-none absolute opacity-[0.06] ${className}`}
+      className={`pointer-events-none select-none absolute -z-10 opacity-[0.07] ${className}`}
     />
   );
 }
@@ -150,7 +150,7 @@ function Hero() {
 
 function About() {
   return (
-    <section id="sobre" className="relative overflow-hidden py-24 lg:py-32">
+    <section id="sobre" className="relative isolate overflow-hidden py-24 lg:py-32">
       <Watermark className="-right-24 top-1/2 -translate-y-1/2 w-[420px] lg:w-[560px]" />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
         <div className="relative order-2 lg:order-1">
@@ -191,7 +191,7 @@ const areas = [
 
 function Areas() {
   return (
-    <section id="areas" className="relative overflow-hidden py-24 lg:py-32 bg-secondary/40">
+    <section id="areas" className="relative isolate overflow-hidden py-24 lg:py-32 bg-secondary/40">
       <Watermark className="-left-28 top-10 w-[380px] lg:w-[520px]" />
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -386,7 +386,7 @@ function Contact() {
     window.open(`${WHATSAPP}?text=${encodeURIComponent(text)}`, "_blank");
   };
   return (
-    <section id="contato" className="relative overflow-hidden py-24 lg:py-32 bg-secondary/40">
+    <section id="contato" className="relative isolate overflow-hidden py-24 lg:py-32 bg-secondary/40">
       <Watermark className="left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] lg:w-[700px]" />
       <div className="max-w-6xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12">
         <div>
