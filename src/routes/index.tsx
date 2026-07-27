@@ -52,12 +52,12 @@ function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-3 group">
-          <img src={logoMark} alt="Maria Monteiro Advocacia" width={48} height={48} className="w-12 h-12 object-contain" />
-          <div className="leading-tight hidden sm:block">
-            <div className="font-display text-lg text-primary tracking-wide">Maria Monteiro</div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground">Advocacia e Consultoria Jurídica</div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 h-24 flex items-center justify-between">
+        <a href="#inicio" className="flex items-center gap-4 group">
+          <img src={logoMark} alt="Maria Monteiro Advocacia" width={64} height={64} className="w-14 h-14 lg:w-16 lg:h-16 object-contain shrink-0" />
+          <div className="leading-none hidden sm:block">
+            <div className="font-display text-2xl lg:text-[1.75rem] text-primary tracking-wide">Maria Monteiro</div>
+            <div className="mt-1.5 text-[9px] lg:text-[10px] tracking-[0.3em] uppercase text-muted-foreground">Advocacia e Consultoria Jurídica</div>
           </div>
         </a>
         <nav className="hidden lg:flex items-center gap-8">
