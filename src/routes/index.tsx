@@ -191,7 +191,8 @@ const areas = [
 
 function Areas() {
   return (
-    <section id="areas" className="py-24 lg:py-32 bg-secondary/40">
+    <section id="areas" className="relative overflow-hidden py-24 lg:py-32 bg-secondary/40">
+      <Watermark className="-left-28 top-10 w-[380px] lg:w-[520px]" />
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="text-xs uppercase tracking-[0.3em] text-gold mb-4">Especialidades</div>
