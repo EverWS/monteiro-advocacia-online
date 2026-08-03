@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/maria-monteiro.jpg";
 import aboutImg from "@/assets/about-office.jpg";
-import logoMark from "@/assets/mark-m-white.png";
+import logoMark from "@/assets/mark-m-dark.png.asset.json";
 import watermark from "@/assets/watermark-m.png.asset.json";
 
 function Watermark({ className = "" }: { className?: string }) {
