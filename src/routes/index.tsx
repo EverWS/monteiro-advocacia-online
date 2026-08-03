@@ -67,10 +67,6 @@ function Header() {
             </a>
           ))}
         </nav>
-        <a href={WHATSAPP} target="_blank" rel="noreferrer"
-          className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 rounded-full gradient-gold text-primary-foreground text-sm font-medium shadow-gold hover:scale-[1.02] transition-transform">
-          <MessageCircle size={16} /> Agendar Consulta
-        </a>
         <button className="lg:hidden text-primary" onClick={() => setOpen(!open)} aria-label="Menu">
           {open ? <X /> : <Menu />}
         </button>
