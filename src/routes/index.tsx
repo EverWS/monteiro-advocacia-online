@@ -79,10 +79,6 @@ function Header() {
                 {n.label}
               </a>
             ))}
-            <a href={WHATSAPP} target="_blank" rel="noreferrer"
-              className="mt-2 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full gradient-gold text-primary-foreground font-medium shadow-gold">
-              <MessageCircle size={16} /> Agendar Consulta
-            </a>
           </div>
         </div>
       )}
