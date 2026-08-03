@@ -503,7 +503,7 @@ function Index() {
         <Contact />
       </main>
       <Footer />
-      <FloatingWhatsApp />
+      <FloatingCta />
     </div>
   );
 }
