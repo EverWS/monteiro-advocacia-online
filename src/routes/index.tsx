@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/maria-monteiro.jpg";
 import aboutImg from "@/assets/about-office.jpg";
-import logoMark from "@/assets/mark-m-dark.png.asset.json";
+import logoMark from "@/assets/mark-m-white.png";
 import watermark from "@/assets/watermark-m.png.asset.json";
 
 function Watermark({ className = "" }: { className?: string }) {
@@ -54,7 +54,7 @@ function Header() {
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-24 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-4 group">
-          <img src={logoMark.url} alt="Maria Monteiro Advocacia" width={64} height={58} className="h-11 lg:h-12 w-auto object-contain shrink-0" />
+          <img src={logoMark} alt="Maria Monteiro Advocacia" width={64} height={58} className="h-11 lg:h-12 w-auto object-contain shrink-0" />
           <div className="leading-none hidden sm:block">
             <div className="font-display text-2xl lg:text-[1.75rem] text-primary tracking-wide">Maria Monteiro</div>
             <div className="mt-1.5 text-[9px] lg:text-[10px] tracking-[0.3em] uppercase text-muted-foreground">Advocacia e Consultoria Jurídica</div>
