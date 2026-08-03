@@ -476,15 +476,16 @@ function Footer() {
   );
 }
 
-function FloatingWhatsApp() {
+function FloatingCta() {
   return (
     <a href={WHATSAPP} target="_blank" rel="noreferrer"
-      aria-label="WhatsApp"
-      className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full gradient-gold shadow-gold flex items-center justify-center hover:scale-110 transition-transform float-anim">
-      <MessageCircle size={24} className="text-primary-foreground" />
+      aria-label="Agendar consulta pelo WhatsApp"
+      className="fixed bottom-6 right-6 z-40 inline-flex items-center gap-2 pl-5 pr-6 py-3.5 rounded-full gradient-gold text-primary-foreground text-sm font-medium shadow-gold hover:scale-[1.03] transition-transform float-anim">
+      <MessageCircle size={18} /> Agendar Consulta
     </a>
   );
 }
+
 
 function Index() {
   return (
