@@ -281,7 +281,7 @@ function CTA() {
               Precisa de orientação jurídica em um momento delicado?
             </h2>
             <p className="text-lg text-primary-foreground/80 mb-10 leading-relaxed">
-              Fale com a advogada Maria Monteiro e receba uma análise cuidadosa do seu caso.
+              Entre em contato e receba uma análise cuidadosa para o seu caso.
             </p>
             <a href={WHATSAPP} target="_blank" rel="noreferrer"
               className="inline-flex items-center gap-3 px-10 py-5 rounded-full gradient-gold text-primary font-semibold shadow-gold hover:scale-[1.03] transition-transform text-lg">
