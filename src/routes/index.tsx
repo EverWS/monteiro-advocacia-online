@@ -284,7 +284,7 @@ function CTA() {
               Entre em contato e receba uma análise cuidadosa para o seu caso.
             </p>
             <a href={WHATSAPP} target="_blank" rel="noreferrer"
-              className="inline-flex items-center gap-3 px-10 py-5 rounded-full gradient-gold text-primary font-semibold shadow-gold hover:scale-[1.03] transition-transform text-lg">
+              className="inline-flex items-center gap-3 px-10 py-5 rounded-full gradient-gold text-primary-foreground font-semibold shadow-gold hover:scale-[1.03] transition-transform text-lg">
               <MessageCircle size={20} /> Agendar consulta pelo WhatsApp
             </a>
           </div>
