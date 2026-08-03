@@ -162,10 +162,6 @@ function About() {
               Com atendimento online em todo o Brasil, oferece suporte jurídico para pessoas que enfrentam momentos delicados envolvendo divórcio, guarda, pensão, união estável, inventários, conflitos familiares e relações de consumo.
             </p>
           </div>
-          <a href={WHATSAPP} target="_blank" rel="noreferrer"
-            className="mt-8 inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors">
-            <MessageCircle size={18} /> Falar com a advogada
-          </a>
         </div>
       </div>
     </section>
