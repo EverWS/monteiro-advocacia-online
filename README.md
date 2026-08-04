@@ -70,7 +70,7 @@ npm run preview
 
 ---
 
-## Arquitetura (visão v2)
+## Arquitetura (versão v2)
 
 A aplicação segue uma arquitetura **frontend-first com SSR em edge runtime**.
 
@@ -147,8 +147,6 @@ O projeto está preparado para deploy com Cloudflare, com configuração em `wra
 Fluxo recomendado:
 1. gerar build (`npm run build`);
 2. publicar com o fluxo de deploy adotado pelo time/conta Cloudflare.
-
-> Se necessário, adicione neste README os comandos exatos de deploy usados na sua conta (ex.: `wrangler deploy`), incluindo nome do worker/projeto e variáveis de ambiente.
 
 ---
 
