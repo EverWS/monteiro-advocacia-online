@@ -452,7 +452,7 @@ function Footer() {
           <img
             src={markMWhite}
             alt="Maria Monteiro"
-            className="h-[72px] w-[72px] object-contain"
+            className="h-[90px] w-[126px] object-contain"
           />
         </div>
         <p className="text-sm text-primary-foreground/70">
