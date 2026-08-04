@@ -452,11 +452,11 @@ function Footer() {
           <img
             src={markMWhite}
             alt="Maria Monteiro"
-            className="h-[90px] w-[126px] object-contain"
+            className="h-[108px] w-[162px] object-contain"
           />
         </div>
         <p className="text-sm text-primary-foreground/70">
-          © {new Date().getFullYear()} Maria Monteiro Advocacia. Todos os direitos reservados.
+          © {new Date().getFullYear()} Todos os direitos reservados.
         </p>
         <p className="text-xs text-primary-foreground/60 max-w-2xl mx-auto leading-relaxed">
           As informações deste site possuem caráter informativo e não substituem a consulta jurídica individualizada. A atuação profissional observa as normas da OAB.
