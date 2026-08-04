@@ -448,13 +448,12 @@ function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground py-14">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center space-y-4">
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center justify-center">
           <img
             src={markMWhite.url}
             alt="Maria Monteiro"
-            className="h-9 w-9 object-contain rounded-full bg-white/10"
+            className="h-9 w-9 object-contain"
           />
-          <span className="font-display text-xl">Maria Monteiro Advocacia</span>
         </div>
         <p className="text-sm text-primary-foreground/70">
           © {new Date().getFullYear()} Maria Monteiro Advocacia. Todos os direitos reservados.
