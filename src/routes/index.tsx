@@ -29,7 +29,7 @@ const INSTAGRAM = "https://www.instagram.com/adv.mariamonteiro/";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Maria Monteiro Advocacia — Família, Sucessões e Consumidor" },
+      { title: "Maria Monteiro Advocacia" },
       { name: "description", content: "Advocacia especializada em Direito de Família, Sucessões e Direito do Consumidor. Atendimento online em todo o Brasil com escuta humanizada e segurança jurídica." },
       { name: "keywords", content: "advogada família, divórcio, guarda, pensão alimentícia, inventário, união estável, direito do consumidor, advogada online" },
       { property: "og:title", content: "Maria Monteiro Advocacia" },
