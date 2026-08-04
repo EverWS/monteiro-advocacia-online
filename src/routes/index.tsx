@@ -22,7 +22,7 @@ function Watermark({ className = "" }: { className?: string }) {
   );
 }
 
-const WHATSAPP = "https://wa.me/5511992998352";
+const WHATSAPP = "https://wa.me/5517996490035";
 const INSTAGRAM = "https://www.instagram.com/adv.mariamonteiro/";
 
 export const Route = createFileRoute("/")({
