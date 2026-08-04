@@ -13,7 +13,7 @@ import watermark from "@/assets/watermark-m.png";
 function Watermark({ className = "" }: { className?: string }) {
   return (
     <img
-      src={watermark.url}
+      src={watermark}
       alt=""
       aria-hidden="true"
       loading="lazy"
