@@ -121,7 +121,7 @@ function Hero() {
         <div className="relative fade-in-up" style={{ animationDelay: "0.2s" }}>
           <div className="absolute -inset-6 gradient-gold opacity-20 blur-3xl rounded-full" />
           <div className="relative rounded-[2rem] overflow-hidden shadow-elegant border border-border/60">
-            <img src={heroImg} alt="Advogada Maria Monteiro" width={1280} height={1600} className="w-full h-auto object-cover" />
+            <img src={heroImg.url} alt="Advogada Maria Monteiro" width={1280} height={1600} className="w-full h-auto object-cover" />
           </div>
           <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-5 shadow-elegant border border-border max-w-[220px] hidden md:block float-anim">
             <div className="flex items-center gap-3">
