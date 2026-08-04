@@ -8,6 +8,7 @@ import {
 import heroImg from "@/assets/maria-monteiro-nova.png";
 import aboutImg from "@/assets/about-office.jpg";
 import logoMark from "@/assets/mark-m-dark.png";
+import markMWhite from "@/assets/mark-m-white.png.asset.json";
 import watermark from "@/assets/watermark-m.png";
 
 function Watermark({ className = "" }: { className?: string }) {
@@ -448,9 +449,11 @@ function Footer() {
     <footer className="bg-primary text-primary-foreground py-14">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center space-y-4">
         <div className="flex items-center justify-center gap-2">
-          <span className="w-9 h-9 rounded-full gradient-gold flex items-center justify-center">
-            <Scale size={18} className="text-primary" />
-          </span>
+          <img
+            src={markMWhite.url}
+            alt="Maria Monteiro"
+            className="h-9 w-9 object-contain rounded-full bg-white/10"
+          />
           <span className="font-display text-xl">Maria Monteiro Advocacia</span>
         </div>
         <p className="text-sm text-primary-foreground/70">
