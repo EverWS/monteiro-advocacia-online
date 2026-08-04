@@ -70,15 +70,45 @@ npm run preview
 
 ---
 
-## Deploy (Cloudflare)
+## Arquitetura (visão v2)
 
-O projeto está preparado para deploy com Cloudflare, com configuração em `wrangler.jsonc` e plugin `@cloudflare/vite-plugin`.
+A aplicação segue uma arquitetura **frontend-first com SSR em edge runtime**.
 
-Fluxo recomendado:
-1. gerar build (`npm run build`);
-2. publicar com o fluxo de deploy adotado pelo time/conta Cloudflare.
+- `src/server.ts` atua como entrypoint SSR e normaliza falhas catastróficas com fallback HTML.
+- `src/start.ts` adiciona middleware de erro para requests server-side.
+- `src/router.tsx` cria o router e injeta `QueryClient` no contexto.
+- `src/routes/__root.tsx` define shell global (`<html>`, `<head>`, scripts, meta e boundaries).
+- `src/routes/index.tsx` compõe a landing principal e o fluxo de contato.
 
-> Se necessário, adicione neste README os comandos exatos de deploy usados na sua conta (ex.: `wrangler deploy`), incluindo nome do worker/projeto e variáveis de ambiente.
+### Fluxo de execução (alto nível)
+
+```text
+Request HTTP
+   ↓
+server.ts (SSR handler + normalização de erro)
+   ↓
+start.ts (middleware server)
+   ↓
+router.tsx (route tree + query client)
+   ↓
+routes/__root.tsx (shell global)
+   ↓
+routes/index.tsx (UI da landing)
+```
+
+### Fluxo de conversão (contato)
+
+```text
+Usuário preenche formulário
+   ↓
+Validação client-side (estado atual: básica)
+   ↓
+Composição da mensagem
+   ↓
+Redirecionamento para wa.me em nova aba
+```
+
+> Estado atual: não há persistência de lead em backend neste repositório.
 
 ---
 
@@ -110,14 +140,103 @@ src/
 
 ---
 
-## Fluxo de contato (estado atual)
+## Deploy (Cloudflare)
 
-Atualmente, o formulário da seção de contato:
-1. coleta `nome`, `telefone` e `mensagem`;
-2. compõe um texto;
-3. redireciona o usuário para o WhatsApp via `wa.me` em nova aba.
+O projeto está preparado para deploy com Cloudflare, com configuração em `wrangler.jsonc` e plugin `@cloudflare/vite-plugin`.
 
-Não há persistência de lead no backend nesta versão.
+Fluxo recomendado:
+1. gerar build (`npm run build`);
+2. publicar com o fluxo de deploy adotado pelo time/conta Cloudflare.
+
+> Se necessário, adicione neste README os comandos exatos de deploy usados na sua conta (ex.: `wrangler deploy`), incluindo nome do worker/projeto e variáveis de ambiente.
+
+---
+
+## Convenções de trabalho (branch/commit/PR)
+
+## Branches
+Sugestão de padrão:
+- `feat/<descricao-curta>`
+- `fix/<descricao-curta>`
+- `docs/<descricao-curta>`
+- `chore/<descricao-curta>`
+
+Exemplos:
+- `feat/form-validation-contact`
+- `fix/lang-pt-br-root`
+- `docs/readme-v2`
+
+## Commits
+Seguir estilo descritivo curto, preferencialmente no formato:
+- `feat: ...`
+- `fix: ...`
+- `docs: ...`
+- `chore: ...`
+
+Exemplos:
+- `fix: ajusta idioma raiz para pt-BR`
+- `feat: adiciona schema de validação do formulário`
+
+## Pull Requests
+Todo PR deve incluir:
+- contexto do problema;
+- o que foi alterado;
+- impacto esperado;
+- checklist de validação local.
+
+Checklist mínimo sugerido:
+
+```bash
+npm run lint
+npm run build
+```
+
+---
+
+## Troubleshooting (erros comuns)
+
+## 1) Erro ao iniciar `npm run dev`
+**Possíveis causas**
+- dependências não instaladas corretamente;
+- versão de Node incompatível.
+
+**Ações**
+```bash
+node -v
+npm install
+npm run dev
+```
+
+## 2) Build falha em `npm run build`
+**Possíveis causas**
+- erro de tipagem TypeScript;
+- import quebrado;
+- regressão em componentes/rotas.
+
+**Ações**
+```bash
+npm run lint
+npm run build
+```
+Revisar mensagens de erro e corrigir imports/tipos indicados.
+
+## 3) Estilo não aplicado corretamente
+**Possíveis causas**
+- problema em classes/utilitários Tailwind;
+- alteração incorreta em `src/styles.css`.
+
+**Ações**
+- validar classes no componente alterado;
+- revisar tokens e utilitários customizados em `styles.css`.
+
+## 4) Fallback de erro 500 inesperado
+**Contexto**
+- `server.ts` e `start.ts` possuem normalização de erros SSR.
+
+**Ações**
+- verificar logs no ambiente de execução;
+- reproduzir localmente com `npm run dev`;
+- revisar mudanças recentes em rotas/renderização SSR.
 
 ---
 
@@ -154,6 +273,6 @@ npm run build
 
 ## Licença
 
-Sem licença explícita no repositório até o momento.
+**All Rights Reserved**.
 
-Se desejar, adicione um arquivo `LICENSE` para definir o modelo de uso/distribuição.
+Este repositório, seu código-fonte, design, textos e demais ativos não podem ser copiados, modificados, distribuídos ou reutilizados sem autorização expressa do titular dos direitos.
