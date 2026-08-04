@@ -5,7 +5,7 @@ import {
   MessageCircle, Phone, Video, Instagram, Menu, X, ChevronDown,
   CheckCircle2, ShieldCheck, Sparkles,
 } from "lucide-react";
-import heroImg from "@/assets/maria-monteiro.jpg";
+import heroImg from "@/assets/maria-monteiro-nova.png.asset.json";
 import aboutImg from "@/assets/about-office.jpg";
 import logoMark from "@/assets/mark-m-dark.png.asset.json";
 import watermark from "@/assets/watermark-m.png.asset.json";
