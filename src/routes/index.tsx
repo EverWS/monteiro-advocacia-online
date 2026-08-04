@@ -5,7 +5,7 @@ import {
   MessageCircle, Phone, Video, Instagram, Menu, X, ChevronDown,
   CheckCircle2, ShieldCheck, Sparkles,
 } from "lucide-react";
-import heroImg from "@/assets/maria-monteiro.jpg";
+import heroImg from "@/assets/maria-monteiro-nova.png.asset.json";
 import aboutImg from "@/assets/about-office.jpg";
 import logoMark from "@/assets/mark-m-dark.png.asset.json";
 import watermark from "@/assets/watermark-m.png.asset.json";
@@ -121,7 +121,7 @@ function Hero() {
         <div className="relative fade-in-up" style={{ animationDelay: "0.2s" }}>
           <div className="absolute -inset-6 gradient-gold opacity-20 blur-3xl rounded-full" />
           <div className="relative rounded-[2rem] overflow-hidden shadow-elegant border border-border/60">
-            <img src={heroImg} alt="Advogada Maria Monteiro" width={1280} height={1600} className="w-full h-auto object-cover" />
+            <img src={heroImg.url} alt="Advogada Maria Monteiro" width={1280} height={1600} className="w-full h-auto object-cover" />
           </div>
           <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-5 shadow-elegant border border-border max-w-[220px] hidden md:block float-anim">
             <div className="flex items-center gap-3">
