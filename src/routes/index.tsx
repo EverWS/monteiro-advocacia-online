@@ -8,7 +8,7 @@ import {
 import heroImg from "@/assets/maria-monteiro-nova.png";
 import aboutImg from "@/assets/about-office.jpg";
 import logoMark from "@/assets/mark-m-dark.png";
-import markMWhite from "@/assets/mark-m-white-vector.png.asset.json";
+import markMWhite from "@/assets/logo-Mark-branco.png";
 import watermark from "@/assets/watermark-m.png";
 
 function Watermark({ className = "" }: { className?: string }) {
@@ -450,7 +450,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center space-y-4">
         <div className="flex items-center justify-center">
           <img
-            src={markMWhite.url}
+            src={markMWhite}
             alt="Maria Monteiro"
             className="h-[72px] w-[72px] object-contain"
           />
